@@ -15,6 +15,17 @@ app.get("/alunos", (req, res) => {
     res.json(resConsultar);
 });
 
+app.post("/alunos/novo", (req, res) => {
+    const { nome, media, matricula } = req.query;
+    const novoAluno = { nome: nome, media: media, matricula: matricula};
+    if (nome !== undefined && media !== undefined && matricula !== undefined) {
+        alunos.push(novoAluno)
+        res.send(`Aluno adicionado com sucesso !`);
+      } else {
+        res.status(400).send("Não foi possível adicionar o aluno.");
+      }
+  });
+
 
 
 
