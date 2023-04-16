@@ -32,8 +32,16 @@ app.post("/alunos/deletar/:index", (req, res) => {
         alunos.splice(index, 1);
         res.send(alunos)
     } else {
-        res.status(404).send("Aluno não encontrado!")
+        res.status(404).send("O Aluno não pode ser encontrado.")
     }
+})
+
+app.post("/alunos/atualizar/:index", (req, res)=> {
+    const { index } = req.params;
+    const{nome, media} = req.query;
+    alunos[index].nome= nome;
+    alunos[index].media = media;
+    res.json(alunos);
 })
 
 
