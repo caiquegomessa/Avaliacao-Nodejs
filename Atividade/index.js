@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const alunos = require("./alunos");
-const dbJson = require("./db.json");
+
 
 
 app.get("/alunos", (req, res) => {
@@ -20,14 +20,14 @@ app.post("/alunos/novo", (req, res) => {
     alunos.Adicionar(req, res);
 });
 
-app.post("/alunos/deletar/:index", (req, res) => {
+app.delete("/alunos/deletar/:index", (req, res) => {
     alunos.Deletar(req, res);
+});
 
-})
-
-app.post("/alunos/atualizar/:index", (req, res)=> {
+app.put("/alunos/atualizar/:index", (req, res)=> {
     alunos.Atualizar(req, res);
-})
+});
+
 
 
 app.listen(3000, () => {
