@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "97b1d1d9-0310-415e-81a6-df5d3de4059a",
+		"name": "Atividade Avaliativa NODE&EXPRESS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26870949"
+	},
+	"item": [
+		{
+			"name": "Listar Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alunos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alunos/novo?nome=Caique&matricula=7&media=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alunos",
+						"novo"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Caique"
+						},
+						{
+							"key": "matricula",
+							"value": "7"
+						},
+						{
+							"key": "media",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alunos/deletar/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alunos",
+						"deletar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alunos/atualizar/1?nome=CaiqueGomes&media=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alunos",
+						"atualizar",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "CaiqueGomes"
+						},
+						{
+							"key": "media",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
